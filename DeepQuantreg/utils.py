@@ -37,6 +37,7 @@ def get_group_weights(time, delta, trt):
 
 
 def huber(y_true, y_pred, eps=0.001):
+  # This is just the huber function defined in the paper.
   error = y_true - y_pred
   cond  = K.abs(error) < eps
 
